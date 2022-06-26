@@ -6,8 +6,9 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 @Service
 public interface ReadFileService {
-    public HashMap<Character, List<Position>> readFile(String input) throws IOException;
+    public CompletableFuture<HashMap<Character, List<Position>>> readFile(String input) throws IOException;
 }

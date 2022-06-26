@@ -8,6 +8,7 @@ import com.example.demo.services.interfaces.ReadFileService;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class ParserServiceImpl implements ParserService {
     private ReadFileService readFileService;
@@ -18,8 +19,11 @@ public class ParserServiceImpl implements ParserService {
     }
 
     public HashMap<Character, List<Position>> parseMap(String input) throws IOException {
-        final var map = readFileService.readFile(input);
-        return map;
+        try {
+            return readFileService.readFile(input).get();
+        } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

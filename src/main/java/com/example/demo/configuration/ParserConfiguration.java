@@ -6,8 +6,10 @@ import com.example.demo.services.impl.ParserServiceImpl;
 import com.example.demo.services.impl.ReadFileServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @Configuration
+@EnableAsync
 public class ParserConfiguration {
 
     @Bean

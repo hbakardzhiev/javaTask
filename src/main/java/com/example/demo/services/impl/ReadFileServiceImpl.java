@@ -4,14 +4,19 @@ package com.example.demo.services.impl;
 import com.example.demo.modules.Position;
 import com.example.demo.services.interfaces.ReadFileService;
 import com.example.demo.UtilHelpers;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 
 public class ReadFileServiceImpl implements ReadFileService {
 
-    public HashMap<Character, List<Position>> readFile(String input) throws IOException {
+    @Async
+    public CompletableFuture<HashMap<Character, List<Position>>> readFile(String input) throws IOException {
         final var filePath = (UtilHelpers.SRC_MAIN_RESOURCES + input);
 
         try (FileInputStream inputStream = new FileInputStream(filePath)) {
@@ -39,7 +44,7 @@ public class ReadFileServiceImpl implements ReadFileService {
 
                 colNumber++;
             }
-            return hashMap;
+            return CompletableFuture.completedFuture(hashMap);
         }
     }
 
