@@ -16,15 +16,16 @@ import java.util.List;
 @RequestMapping
 public class ParserController {
 
-    private ParserService parserService;
+  private ParserService parserService;
 
-    @Autowired
-    public ParserController(ParserService parserService) {
-        this.parserService = parserService;
-    }
+  @Autowired
+  public ParserController(ParserService parserService) {
+    this.parserService = parserService;
+  }
 
-    @PostMapping
-    public HashMap<Character, List<Position>> parseFile(@RequestBody String input) throws IOException {
-        return parserService.parseMap(input);
-    }
+  @PostMapping
+  public HashMap<Character, List<Position>> parseFile(@RequestBody String input)
+      throws IOException {
+    return parserService.parseMap(input);
+  }
 }

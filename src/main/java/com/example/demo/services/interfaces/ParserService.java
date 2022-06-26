@@ -9,5 +9,5 @@ import java.util.List;
 
 @Service
 public interface ParserService {
-    public HashMap<Character, List<Position>> parseMap(String input) throws IOException;
+  public HashMap<Character, List<Position>> parseMap(String input) throws IOException;
 }

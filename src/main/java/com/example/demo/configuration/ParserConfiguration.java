@@ -12,13 +12,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class ParserConfiguration {
 
-    @Bean
-    ParserService parserServiceCreate(ReadFileService readFileService) {
-        return new ParserServiceImpl(readFileService);
-    }
+  @Bean
+  ParserService parserServiceCreate(ReadFileService readFileService) {
+    return new ParserServiceImpl(readFileService);
+  }
 
-    @Bean
-    ReadFileService readFileServiceCreate() {
-        return new ReadFileServiceImpl();
-    }
+  @Bean
+  ReadFileService readFileServiceCreate() {
+    return new ReadFileServiceImpl();
+  }
 }

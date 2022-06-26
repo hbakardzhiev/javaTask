@@ -10,5 +10,6 @@ import java.util.concurrent.CompletableFuture;
 
 @Service
 public interface ReadFileService {
-    public CompletableFuture<HashMap<Character, List<Position>>> readFile(String input) throws IOException;
+  public CompletableFuture<HashMap<Character, List<Position>>> readFile(String input)
+      throws IOException;
 }
