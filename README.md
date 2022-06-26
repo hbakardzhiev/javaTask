@@ -113,6 +113,12 @@ The resource folder is where the user has to copy the files that are to be read 
 
 The current project has Github Workflow to fix formating of the .java files to the Google Java codestyle.
 
+# Dealing with HTML Markup
+TODO
+
+# Build project
+TODO
+
 # Future improvements to be implemented if the project is to be deployed:
   - Implement tests
   - Multi-threading
