@@ -111,6 +111,8 @@ It is split into 4 different packages:
 
 The resource folder is where the user has to copy the files that are to be read and parsed from the backend.
 
+The current project has Github Workflow to fix formating of the .java files to the Google Java codestyle.
+
 # Future improvements to be implemented if the project is to be deployed:
   - Implement tests
   - Multi-threading
