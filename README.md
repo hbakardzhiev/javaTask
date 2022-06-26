@@ -84,8 +84,8 @@ The main function `readFile` does the parsing of the txt files using the followi
     - returns an async future task
 
 Big-O complexity analysis:
-    - creation of variables takes O(1)
-    - parsing file takes O(n) where n is the number of characters in the input file
+  - creation of variables takes O(1)
+  - parsing file takes O(n) where n is the number of characters in the input file
 
 
 
