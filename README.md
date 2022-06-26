@@ -86,7 +86,7 @@ The output below is generated when the user passes the input.txt file to the Con
 }
 ```
 The ideology of the output is that each number present in the user input would be on the 1st level and its occurrences would be on the 2nd level.
-This way you would only see numbers that are part of the file and all their exact places.
+This way you would only see numbers that are part of the file and all their exact places in the original document.
 
 # Performance
 The main function `readFile` does the parsing of the txt files using the following:
