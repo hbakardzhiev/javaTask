@@ -12,6 +12,7 @@ The input I have decided to be a txt file. The following is the content of the i
 8
 ```
 
+If the user would like to query a file they would have to make a POST requst to localhost:8080 and pass as a params the filename as seen in this Postman request:
 ![2022-06-27-000907_1920x1080_scrot](https://user-images.githubusercontent.com/23415119/175835604-dda8b9dc-6a58-4433-9b64-15a4cd18308d.png)
 
 
