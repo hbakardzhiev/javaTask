@@ -108,4 +108,12 @@ It is split into 4 different packages:
   - services:
     - impl (implementations)
     - interfaces
+
 The resource folder is where the user has to copy the files that are to be read and parsed from the backend.
+
+# Future improvements to be implemented if the project is to be deployed:
+  - Implement tests
+  - Multi-threading
+  - create CI/CD deployment
+  - Dockerize
+  - Implement Controller function to upload a file instead of only parsing files already in the resources folder
