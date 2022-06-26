@@ -99,6 +99,12 @@ Big-O complexity analysis:
   - creation of variables takes O(1)
   - parsing file takes O(n) where n is the number of characters in the input file
 
-
-
-
+# Project structure
+The project uses SpringBoot with maven and JDK 17.
+It is split into 4 different packages:
+  - configuration
+  - controllers
+  - modules (which are the classes)
+  - services
+    - impl (implementations)
+    - interfaces
