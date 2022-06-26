@@ -105,6 +105,7 @@ It is split into 4 different packages:
   - configuration
   - controllers
   - modules (which are the classes)
-  - services
+  - services:
     - impl (implementations)
     - interfaces
+The resource folder is where the user has to copy the files that are to be read and parsed from the backend.
