@@ -78,10 +78,10 @@ This way you would only see numbers that are part of the file and all their exac
 
 # Performance
 The main function `readFile` does the parsing of the txt files using the following:
-    - uses hashMap to store the found digits and their position.
-    - tracks end of rows using `isEndOfLine`. 
-    - `isASCIIDigit` checks whether the current character is digit if it is, then it adds the position to the hashMap
-    - returns an async future task
+  - uses hashMap to store the found digits and their position.
+  - tracks end of rows using `isEndOfLine`. 
+  - `isASCIIDigit` checks whether the current character is digit if it is, then it adds the position to the hashMap
+  - returns an async future task
 
 Big-O complexity analysis:
   - creation of variables takes O(1)
