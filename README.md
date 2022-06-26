@@ -4,8 +4,19 @@ Assignment description:
   - provide a reference to them.
 
 # Input
-The input I have decided to be a txt file. 
-It can be of any size and even if the entire file is written on a single line it would be handled properly.
+The input I have decided to be a txt file. The following is the content of the input.txt saved on the server:
+```
+123
+1230
+1239
+8
+```
+
+![2022-06-27-000907_1920x1080_scrot](https://user-images.githubusercontent.com/23415119/175835604-dda8b9dc-6a58-4433-9b64-15a4cd18308d.png)
+
+
+Note: The file can be of any size and even if it is written on a single line it would be handled properly.
+
 
 # Output
 The output below is generated when the user passes the input.txt file to the Controller.
