@@ -100,7 +100,7 @@ Speed (all metrics are taken from cold boot):
 
 Big-O complexity analysis:
   - creation of variables takes O(1)
-  - parsing file takes O(n) where n is the number of characters in the input file
+  - parsing file takes O(n) where n is the number of characters in the input file \
   Total Big-O complexity is O(n).
 
 # Project structure
