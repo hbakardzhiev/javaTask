@@ -89,15 +89,18 @@ The ideology of the output is that each number present in the user input would b
 This way you would only see numbers that are part of the file and all their exact places in the original document.
 
 # Performance
-The main function `readFile` does the parsing of the txt files using the following:
-  - uses hashMap to store the found digits and their position.
-  - tracks end of rows using `isEndOfLine`. 
-  - `isASCIIDigit` checks whether the current character is digit if it is, then it adds the position to the hashMap
-  - returns an async future task
+Speed (all metrics are taken from cold boot):
+  - input.txt takes 180ms
+  - 1KB.txt takes 11ms
+  - 10KB.txt takes 17ms
+  - 1000KB.txt takes 6sms
+  - 1MB.txt takes 261ms
+  - 10MB.txt takes around 1116ms (the output is too big to be transfered over POST. I would have to consider for future improvement choping output into smaller packets to send successfully.)
 
 Big-O complexity analysis:
   - creation of variables takes O(1)
   - parsing file takes O(n) where n is the number of characters in the input file
+  Total Big-O complexity is O(n).
 
 # Project structure
 The project uses SpringBoot with maven and JDK 17.
@@ -112,6 +115,12 @@ It is split into 4 different packages:
 The resource folder is where the user has to copy the files that are to be read and parsed from the backend.
 
 The current project has Github Workflow to fix formating of the .java files to the Google Java codestyle.
+
+The main function `readFile()` does the parsing of the txt files using the following:
+  - uses hashMap to store the found digits and their position.
+  - tracks end of rows using `isEndOfLine()`. 
+  - `isASCIIDigit()` checks whether the current character is digit if it is, then it adds the position to the hashMap
+  - returns an async future result
 
 # Dealing with HTML Markup
 TODO
