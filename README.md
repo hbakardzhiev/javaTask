@@ -123,7 +123,7 @@ The main function `readFile()` does the parsing of the txt files using the follo
   - `isASCIIDigit()` checks whether the current character is digit if it is, then it adds the position to the hashMap
   - returns an async future result
 
-# Dealing with HTML Markup
+# Dealing with HTML/XML Markup
 1) One approach would be using regex to clear up markup.\
 First, we would have to parse line by line since the markup tags might be in the beginning of the line and all the way at the end thus character by character parsing would not work. Optionally if the line is too big to be parsed into memory. We can again parse character by character but when we see the beginining of tag (e.g. `<s`) we start skipping characters till we see the ending of the tag (e.g. `>` or `/>`). 
 
