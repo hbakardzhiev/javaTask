@@ -132,7 +132,7 @@ The regex that we have to use is: `<[^>]*>`. It finds patterns that start with `
 2) Would be using a markup parsing library such as Jsoup and leave it to clean the markup.
 
 # Build project
-Open in IntelliJ and run the DemoApplication main.
+Open the project in IntelliJ and run the DemoApplication main.
 
 # Future improvements to be implemented if the project is to be deployed:
   - Implement tests
