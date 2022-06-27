@@ -123,10 +123,15 @@ The main function `readFile()` does the parsing of the txt files using the follo
   - returns an async future result
 
 # Dealing with HTML Markup
-TODO
+1) One approach would be using regex to clear up markup.\
+First, we would have to parse line by line since the markup tags might be in the beginning of the line and all the way at the end thus character by character parsing would not work. Optionally if the line is too big to be parsed into memory. We can again parse character by character but when we see the beginining of tag (e.g. `<s`) we start skipping characters till we see the ending of the tag (e.g. `>` or `/>`). 
+
+The regext that we have to use is: `<[^>]*>`. It find patterns that start with `<` have as many characters as needed and end with `>`. Then we would have to replace it like that - `replaceAll("<[^>]*>", "");`. This would remove the markup. Then we continue normaly as it is currently.
+
+2) Would be using an markup parsing library such as Jsoup and leave it to clean the markup.
 
 # Build project
-TODO
+Open in IntelliJ and run the DemoApplication main.
 
 # Future improvements to be implemented if the project is to be deployed:
   - Implement tests
