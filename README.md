@@ -14,6 +14,7 @@ The input I have decided to be a txt file. The following is the content of the i
 
 If the user would like to query a file they would have to make a POST requst to localhost:8080 and pass as a params the filename as seen in this Postman screenshot:
 ![2022-06-27-000907_1920x1080_scrot](https://user-images.githubusercontent.com/23415119/175835604-dda8b9dc-6a58-4433-9b64-15a4cd18308d.png)
+There are several txt files (e.g. input.txt, 1KB.txt, 10KB.txt, 100KB, 1MB, 10MB) that are for testing on the server you can use.
 
 
 Note: The file can be of any size and even if it is written on a single line it would be handled properly.
