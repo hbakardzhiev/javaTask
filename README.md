@@ -12,7 +12,7 @@ The input I have decided to be a txt file. The following is the content of the i
 8
 ```
 
-If the user would like to query a file they would have to make a POST requst to localhost:8080 and pass as a params the filename as seen in this Postman screenshot:
+If the user would like to query a file they would have to make a POST request to localhost:8080 and pass as a params the filename as seen in this Postman screenshot:
 ![2022-06-27-000907_1920x1080_scrot](https://user-images.githubusercontent.com/23415119/175835604-dda8b9dc-6a58-4433-9b64-15a4cd18308d.png)
 There are several txt files (e.g. input.txt, 1KB.txt, 10KB.txt, 100KB, 1MB, 10MB) that are for testing on the server you can use.
 
@@ -96,7 +96,7 @@ Speed (all metrics are taken from cold boot):
   - 10KB.txt takes 17ms
   - 1000KB.txt takes 6sms
   - 1MB.txt takes 261ms
-  - 10MB.txt takes around 1116ms (the output is too big to be transfered over POST. I would have to consider for future improvement choping output into smaller packets to send successfully.)
+  - 10MB.txt takes around 1116ms (the output is too big to be transferred over POST. I would have to consider for future improvement chopping output into smaller packets to send successfully.)
 
 Big-O complexity analysis:
   - creation of variables takes O(1)
@@ -115,7 +115,7 @@ It is split into 4 different packages:
 
 The resource folder is where the user has to copy the files that are to be read and parsed from the backend.
 
-The current project has Github Workflow to fix formating of the .java files to the Google Java codestyle.
+The current project has GitHub Workflow to fix formatting of the .java files to the Google Java code-style.
 
 The main function `readFile()` does the parsing of the txt files using the following:
   - uses hashMap to store the found digits and their position.
@@ -125,11 +125,11 @@ The main function `readFile()` does the parsing of the txt files using the follo
 
 # Dealing with HTML Markup
 1) One approach would be using regex to clear up markup.\
-First, we would have to parse line by line since the markup tags might be in the beginning of the line and all the way at the end thus character by character parsing would not work. Optionally if the line is too big to be parsed into memory. We can again parse character by character but when we see the beginining of tag (e.g. `<s`) we start skipping characters till we see the ending of the tag (e.g. `>` or `/>`). 
+First, we would have to parse line by line since the markup tags might be in the beginning of the line and all the way at the end thus character by character parsing would not work. Optionally if the line is too big to be parsed into memory. We can again parse character by character but when we see the beginning of tag (e.g. `<s`) we start skipping characters till we see the ending of the tag (e.g. `>` or `/>`). 
 
-The regext that we have to use is: `<[^>]*>`. It find patterns that start with `<` have as many characters as needed and end with `>`. Then we would have to replace it like that - `replaceAll("<[^>]*>", "");`. This would remove the markup. Then we continue normaly as it is currently.
+The regex that we have to use is: `<[^>]*>`. It finds patterns that start with `<` have as many characters as needed and end with `>`. Then we would have to replace it like that - `replaceAll("<[^>]*>", "");`. This would remove the markup. Then we use the current algorithm.
 
-2) Would be using an markup parsing library such as Jsoup and leave it to clean the markup.
+2) Would be using a markup parsing library such as Jsoup and leave it to clean the markup.
 
 # Build project
 Open in IntelliJ and run the DemoApplication main.
@@ -138,5 +138,5 @@ Open in IntelliJ and run the DemoApplication main.
   - Implement tests
   - Multi-threading
   - create CI/CD deployment
-  - Dockerize
+  - Dockerize application
   - Implement Controller function to upload a file instead of only parsing files already in the resources folder
