@@ -134,6 +134,10 @@ The regex that we have to use is: `<[^>]*>`. It finds patterns that start with `
 
 2) Would be using a markup parsing library such as Jsoup and leave it to clean the markup.
 
+# Dealing with numbers that are represented by string (e.g. ("Seven") or in numeric format (7))
+The approach to deal with them would be to read word by word (which is reading character by character till we hit space).
+Then if the word is a number then we add it to the hashmap. From now on the algorithm continues to be the same as implemented in the code.
+
 # Future improvements to be implemented if the project is to be deployed:
   - Implement tests
   - Multi-threading
